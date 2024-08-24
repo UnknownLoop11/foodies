@@ -1,8 +1,8 @@
 const path = require("path");
 const sql = require("better-sqlite3");
 
-// Use environment variable or default to the root directory
-const dbPath = process.env.DB_PATH || path.join(__dirname, "meals.db");
+// Ensure the path is correct
+const dbPath = path.join(__dirname, "meals.db");
 const db = sql(dbPath);
 
 const dummyMeals = [
